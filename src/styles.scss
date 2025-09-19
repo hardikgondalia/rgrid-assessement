@@ -1,0 +1,59 @@
+// @use 'variable.scss';
+
+// @import '../src/variable.scss';
+@import url(./variable.scss);
+// @import url(./variable.scss);
+// @import url(../src/variable.scss);
+
+
+@font-face {
+  font-family: 'Sora';
+  src: url('assets/font/Sora-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a:visited {
+  color: inherit;
+}
+
+body {
+  font-family: "Sora";
+  font-weight: normal;
+  min-height: 100vh;
+  color: var(--blue-dark);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+ul,
+ol,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+#s4-workspace {
+  scroll-behavior: smooth;
+}
+
+/* End of Common CSS */

@@ -1,0 +1,215 @@
+.navbar {
+    .navbar-brand {
+        font-size: 1.25rem;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    .nav-link {
+        margin: 0 10px;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #0d6efd; // Bootstrap primary
+        }
+
+        &.active {
+            color: #0d6efd;
+            font-weight: 600;
+        }
+    }
+
+    .navbar-icons {
+        a {
+            color: #333;
+            font-size: 1.2rem;
+            position: relative;
+
+            &:hover {
+                color: #0d6efd;
+            }
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: #0d6efd;
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+// Hero Section Div Start //
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-container {
+        width: fit-content;
+        height: auto;
+        gap: 8px;
+
+        .hero-title {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27.3px;
+            text-align: center;
+            // color: #444444;
+            color: var(--blue-dark);
+        }
+
+        .hero-footer-button {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+}
+
+// Hero Section Div End //
+
+
+
+
+
+
+
+// Quicky-List Div Start //
+.quick-list {
+    .quicky-list-item {
+        flex: 1;
+        padding: 42px 0;
+        gap: 10px;
+        color: #B9B9B9;
+        border-right: 2.1px solid #ffffff;
+        border-left: 2.1px solid #ffffff;
+        cursor: pointer;
+        z-index: 11;
+
+        &.active {
+            background-color: #1DA7FB;
+            color: #E7E7E7;
+        }
+
+        .quicky-list-title {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 38px;
+            letter-spacing: -1.05px;
+            color: #FFFFFF;
+            transition: 0.5s;
+        }
+
+        .quicky-list-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25.2px;
+            transition: 0.5s;
+        }
+    }
+
+    .quicky-list-item:hover .quicky-list-title {
+        opacity: 0.5;
+    }
+
+    .quicky-list-item:hover .quicky-list-subtitle {
+        opacity: 0.5;
+    }
+
+    .quick-list-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #1D1D1D;
+        opacity: 0.9;
+        z-index: 10;
+    }
+}
+
+// Quicky-List Div End //
+
+
+// Thoughts Section Div Start //
+.thought-section {
+    .thought-block {
+        gap: 24px;
+
+        .thought-title {
+            flex: 1;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: -1.05px;
+            text-transform: capitalize;
+            color: #1A1A1A;
+        }
+    }
+
+    .brand-section {
+        gap: 62px;
+    }
+}
+
+// Thoughts Section Div End //
+
+
+
+
+
+
+
+@media only screen and (max-width:768px) {
+
+    // Quicky-List Div Start //
+    .quick-list {
+        flex-direction: column;
+
+        .quicky-list-item {
+            width: 100%;
+            border-right: 0;
+            border-left: 0;
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+        }
+    }
+
+    // Quicky-List Div End //
+
+
+    // Thoughts Section Div Start //
+    .thought-section {
+        padding: 18px 32px 26px;
+        flex-direction: column;
+        gap: 32px;
+
+        .thought-block {
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .thought-title {
+            text-align: center;
+        }
+
+        .brand-section {
+            gap: 46px;
+        }
+    }
+
+    // Thoughts Section Div End //
+}
