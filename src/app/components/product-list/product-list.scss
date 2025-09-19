@@ -1,0 +1,79 @@
+.product-list-container {
+    width: 100%;
+    max-width: 1240px;
+    gap: 40px;
+    margin: 0 auto;
+    padding-bottom: 66px;
+
+    .product-card-list {
+        gap: 42px;
+
+        .product-card-row {
+            gap: 34px;
+
+            .product-card {
+                flex: 0 0 calc(25% - 34px);
+
+                .card-badge {
+                    width: fit-content;
+                    height: 32px;
+                    padding: 0 12px;
+                    border-radius: 32px;
+                    background-color: var(--background-color);
+                    font-family: 'Figtree';
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 24px;
+                    text-transform: uppercase;
+                    color: var(--white-light);
+                    position: absolute;
+                    top: 22px;
+                    right: 20px;
+
+                    &.sale-badge {
+                        background-color: var(--light-red-background);
+                    }
+                }
+
+                .card-detail-block {
+                    gap: 8px;
+                    padding: 21px 0;
+                    background-color: var(--light-black-border);
+
+                    .card-title {
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 17px;
+                        text-transform: capitalize;
+                        color: var(--white-light);
+                    }
+
+                    .card-subtitle {
+                        font-family: 'Figtree';
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 30px;
+                        color: var(--background-color);
+                    }
+                }
+            }
+        }
+    }
+
+    .view-more-button {
+        width: fit-content;
+        height: 52px;
+        padding: 0 42px;
+        background-color: var(--background-color);
+        border: none;
+        border-radius: 5px;
+        font-family: 'Figtree';
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--white-light);
+        margin: 0 auto;
+    }
+}

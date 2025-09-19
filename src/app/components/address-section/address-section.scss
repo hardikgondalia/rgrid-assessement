@@ -1,0 +1,43 @@
+.address-container {
+    width: 100%;
+    padding: 67px 0;
+    border-top: 1.05px solid var(--light-gay-border);
+
+    .address-row {
+        width: 100%;
+        max-width: 1240px;
+        margin: 0 auto;
+        gap: 88px;
+
+        .address-card {
+            flex: 1;
+            gap: 32px;
+
+            .address-image-block {
+                min-width: 63px;
+                height: 63px;
+                border: 1px dashed var(--light-blue-border);
+                border-radius: 50%;
+            }
+
+            .address-detail {
+                gap: 15px;
+
+                .address-title {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 22px;
+                    color: var(--normal-black-text);
+                }
+
+                .address-subtitle {
+                    font-family: 'Figtree';
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    color: var(--gray-text);
+                }
+            }
+        }
+    }
+}

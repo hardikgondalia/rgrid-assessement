@@ -1,0 +1,16 @@
+<swiper-container class="promo-slider" [slides-per-view]="1" [loop]="slides.length > 1"
+    [autoplay]="{ delay: 4000, disableOnInteraction: false }" [pagination]="{ clickable: true }"
+    style="--swiper-pagination-top: 10px; --swiper-pagination-bottom: auto">
+    @for (slide of slides; track $index) {
+    <swiper-slide>
+        <div class="product-grid-left position-relative">
+            <img [src]="slide.img" alt="Promo" class="product-left-image" />
+            <div class="product-left-information d-flex flex-column align-items-end">
+                <h2 class="product-information-title">{{ slide.title }}</h2>
+                <p class="product-information-subtitle">{{ slide.subtitle }}</p>
+                <button class="shop-now-button">{{ slide.btnText }}</button>
+            </div>
+        </div>
+    </swiper-slide>
+    }
+</swiper-container>
