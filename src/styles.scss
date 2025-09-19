@@ -1,10 +1,4 @@
-// @use 'variable.scss';
-
-// @import '../src/variable.scss';
-@import url(./variable.scss);
-// @import url(./variable.scss);
-// @import url(../src/variable.scss);
-
+@use 'variables' as *;
 
 @font-face {
   font-family: 'Sora';
@@ -55,5 +49,3 @@ html,
 #s4-workspace {
   scroll-behavior: smooth;
 }
-
-/* End of Common CSS */

@@ -1,4 +1,4 @@
-:host {
+:root {
   // ==================== BLUE ==================== //
   --blue-light: #e9f6ff;
   --blue-light-hover: #ddf2fe;
@@ -43,4 +43,16 @@
   --white-dark-active: #737373;
 
   --white-darker: #595959;
+
+  // ==================== OTHER VARIABLE ==================== //
+  --background-color: #1DA7FB;
+
+  --black-overlay: #1D1D1D;
+
+  --light-black-border: #353639;
+
+  --black-text: #1A1A1A;
+  --dark-gray-text: #444444;
+  --light-gray-text: #E7E7E7;
+  --lightwhite-gray-text: #B9B9B9;
 }
