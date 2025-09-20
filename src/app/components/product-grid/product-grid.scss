@@ -127,12 +127,135 @@
     }
 }
 
+@media only screen and (max-width:1100px) {
+    .product-grid-block {
+        padding: 32px 45px;
+
+        .product-grid-container {
+            height: 420px;
+            max-width: unset;
+            margin: unset;
+            flex-wrap: nowrap;
+            gap: 16px;
+
+            .product-slider {
+                width: 40%;
+            }
+
+            .product-grid-right {
+                width: 60%;
+                gap: 16px;
+                flex: unset;
+
+                .product-grid-item {
+                    .product-right-information {
+                        left: 24px;
+
+                        .product-information-title {
+                            font-size: 16px;
+                            line-height: 26px;
+                        }
+
+                        .product-information-subtitle {
+                            font-size: 20px;
+                            line-height: 24px;
+                        }
+                    }
+
+                    .stethoscope-image {
+                        width: 218px;
+                        height: 330px;
+                    }
+                }
+
+                .visit-store-link {
+                    line-height: 13px;
+                    letter-spacing: 1px;
+                    margin-top: 15px;
+                }
+
+                .product-grid-card {
+                    width: 100%;
+                    gap: 16px;
+
+                    .product-card-list {
+                        width: 50%;
+
+                        .thermometer-image {
+                            width: 188px;
+                            height: 252px;
+                        }
+
+                        .product-card-information {
+                            bottom: 27px;
+                            right: 24px;
+                        }
+                    }
+
+                    .card-information-subtitle {
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+
+                    .medical-supply-card {
+                        .medical-supply-image {
+                            height: 260px;
+                        }
+
+                        .medical-supply-information {
+                            top: 30px;
+                            left: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width:767px) {
     .product-grid-block {
+        padding: 24px 32px;
+
         .product-grid-container {
-            .product-slider {
+            height: unset;
+            flex-wrap: wrap;
+
+            .product-slider,
+            .product-grid-right {
                 width: 100%;
             }
+
+            .product-grid-right {
+
+                .product-grid-item {
+                    aspect-ratio: 1/1;
+                    height: unset;
+                }
+
+                .product-grid-card {
+                    flex-wrap: wrap;
+
+                    .product-card-list {
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                        flex: unset;
+
+                        .thermometer-image {
+                            width: 100%;
+                            height: 100%;
+                            transform: translatey(20px);
+                        }
+                    }
+
+                    .medical-supply-card {
+                        .medical-supply-image {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
