@@ -1,0 +1,147 @@
+.footer {
+    background-color: var(--black-overlay);
+
+    .footer-contaier {
+        width: 100%;
+        max-width: 1350px;
+        padding: 66px 0 60px;
+        margin: 0 auto;
+
+        .footer-brand {
+            gap: 8px;
+
+            .footer-logo {
+                width: 35px;
+                height: 38px;
+            }
+
+            .footer-logo-title {
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 27px;
+                color: var(--white-light);
+            }
+        }
+
+        .footer-desc {
+            font-family: 'Figtree';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--white-light);
+            padding: 26px 0 34px;
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+
+            li {
+                gap: 17px;
+
+                .footer-contact-icon {
+                    width: 25px;
+                    height: 25px;
+                }
+
+                .footer-contact-title {
+                    font-family: 'Figtree';
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 25px;
+                    color: var(--white-light);
+                }
+            }
+        }
+
+        .footer-title {
+            font-family: 'Figtree';
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 26px;
+            color: var(--white-light);
+        }
+
+        .footer-links {
+            padding-top: 19px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+
+            .footer-links-title {
+                font-family: 'Figtree';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: var(--white-light);
+                text-decoration: none;
+                transition: 0.4s;
+
+                &:hover {
+                    color: var(--background-color);
+                }
+            }
+        }
+
+        .payment-title {
+            font-family: 'Figtree';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--white-light);
+            padding-top: 19px;
+        }
+
+        .payment-option-link {
+            padding: 18px 0 25px;
+            gap: 5px;
+
+            .payment-icon {
+                height: 22px;
+            }
+
+            .paypal-icon {
+                height: 19px;
+            }
+        }
+
+        .footer-social {
+            gap: 16px;
+
+            .footer-social-link {
+                width: 37px;
+                height: 37px;
+                border: 1px solid var(--light-white-border);
+                border-radius: 50%;
+                transition: 0.5s;
+
+                &:hover {
+                    border: 1px solid transparent;
+                    background-color: var(--background-color);
+                }
+
+                .social-image {
+                    width: 17px;
+                    height: 17px;
+                }
+            }
+
+        }
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        padding: 13px 0;
+        background-color: var(--background-color);
+
+        .footer-bottom-title {
+            gap: 13px;
+            font-family: 'Figtree';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--white-light);
+        }
+    }
+}
