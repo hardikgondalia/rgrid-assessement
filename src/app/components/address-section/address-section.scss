@@ -18,6 +18,11 @@
                 height: 63px;
                 border: 1px dashed var(--light-blue-border);
                 border-radius: 50%;
+
+                .address-image {
+                    width: 32px;
+                    height: 32px;
+                }
             }
 
             .address-detail {
