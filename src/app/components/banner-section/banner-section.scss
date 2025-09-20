@@ -16,6 +16,20 @@
 
     .brand-section {
         gap: 62px;
+
+        .trustpilot-image {
+            height: 39px;
+        }
+
+        .google-image {
+            width: 132px;
+            height: 44px;
+        }
+
+        .google-star-image {
+            width: 144px;
+            height: 39px;
+        }
     }
 }
 

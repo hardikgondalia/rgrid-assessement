@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 71px;
 
     .hero-container {
         width: fit-content;
@@ -42,6 +43,11 @@
                 text-align: center;
                 text-transform: uppercase;
                 color: var(--white-light);
+                transition: 0.5s;
+
+                &:hover {
+                    background-color: var(--background-color-hover);
+                }
             }
 
             .about-button {
@@ -59,13 +65,19 @@
                 text-align: center;
                 text-transform: uppercase;
                 color: var(--light-black-border);
+                transition: 0.5s;
+
+                &:hover {
+                    border: 1px solid var(--background-color);
+                    color: var(--background-color);
+                }
             }
         }
     }
 
     .vaccine-image {
         position: absolute;
-        top: -35px;
+        top: 36px;
         left: 12px;
     }
 
@@ -79,5 +91,22 @@
         position: absolute;
         bottom: -63px;
         right: 12px;
+    }
+
+    .updown {
+        -webkit-animation: updown 2.5s ease-in-out 2.5s infinite alternate;
+        animation: updown 2.5s ease-in-out 2.5s infinite alternate;
+    }
+
+    @keyframes updown {
+        0% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        100% {
+            -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+        }
     }
 }

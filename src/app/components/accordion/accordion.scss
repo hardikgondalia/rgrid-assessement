@@ -33,6 +33,17 @@
                     box-shadow: none;
                 }
 
+                .accordion-button::after {
+                    background-image: url(../../../assets/images/accordion/accordion-plus.svg);
+                }
+
+                .accordion-button:not(.collapsed)::after {
+                    width: 20px;
+                    height: 4px;
+                    background-image: url(../../../assets/images/accordion/accordion-minus.svg);
+                    transform: 0;
+                }
+
                 .accordion-body {
                     padding: 0 45px 20px 30px;
                     font-family: 'Figtree';
