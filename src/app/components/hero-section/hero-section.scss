@@ -16,7 +16,7 @@
             font-size: 18px;
             line-height: 27px;
             text-align: center;
-            color: var(--dark-gray-text);
+            color: var(--dark-grey-text);
         }
 
         .tablet-image {
@@ -107,6 +107,104 @@
         100% {
             -webkit-transform: translateY(50px);
             transform: translateY(50px);
+        }
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    .hero-section {
+        padding: 110px 0 55px;
+        height: unset;
+        overflow: hidden;
+
+        .hero-container {
+
+            .hero-image {
+                width: 409px;
+                height: 350px;
+            }
+
+            .tablet-image {
+                width: 80px;
+                height: 78px;
+                right: 0;
+            }
+        }
+
+        .vaccine-image {
+            width: 188px;
+            height: 188px;
+            top: 120px;
+            left: -50px;
+        }
+
+        .mask-image {
+            width: 330px;
+            height: 330px;
+            bottom: -30px;
+            left: -75px;
+        }
+
+        .senitizer-bottel-image {
+            width: 294px;
+            height: 291px;
+            bottom: -40px;
+            right: -100px;
+        }
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .hero-section {
+        padding: 110px 0 55px;
+        height: unset;
+        overflow: hidden;
+
+        .hero-container {
+
+            .hero-image {
+                width: 295px;
+                height: 252px;
+            }
+
+            .tablet-image {
+                width: 59px;
+                height: 58px;
+                top: 45px;
+                right: 0;
+            }
+
+            .hero-footer-button {
+                flex-wrap: wrap;
+
+                .shop-button, .about-button {
+                    width: 208px;
+                    height: 56px;
+                    padding: 0;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .vaccine-image {
+            width: 131px;
+            height: 131px;
+            top: 120px;
+            left: -50px;
+        }
+
+        .mask-image {
+            width: 330px;
+            height: 330px;
+            bottom: -30px;
+            left: -160px;
+        }
+
+        .senitizer-bottel-image {
+            width: 206px;
+            height: 204px;
+            bottom: 40px;
+            right: -120px;
         }
     }
 }

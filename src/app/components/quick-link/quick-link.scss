@@ -10,7 +10,7 @@
         align-items: center;
         padding: 42px 0 47px;
         gap: 10px;
-        color: var(--lightwhite-gray-text);
+        color: var(--lightwhite-grey-text);
         border-right: 2px solid var(--white-light);
         border-left: 2px solid var(--white-light);
         cursor: pointer;
@@ -18,7 +18,7 @@
 
         &.active {
             background-color: var(--background-color);
-            color: var(--light-gray-text);
+            color: var(--light-grey-text);
         }
 
         .quicky-list-title {
