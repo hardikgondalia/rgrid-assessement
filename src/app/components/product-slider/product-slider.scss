@@ -1,3 +1,5 @@
+@use '../../../font-mixin.scss' as *;
+
 .promo-slider {
     max-width: 100%;
     margin: 0 auto;
@@ -19,20 +21,14 @@
             right: 40px;
 
             .product-information-title {
-                font-size: 24px;
-                font-weight: 600;
-                line-height: 42px;
+                @include font(24px, 600, 42px, var(--background-color));
                 text-transform: capitalize;
-                color: var(--background-color);
                 margin-bottom: 0;
             }
 
             .product-information-subtitle {
-                font-size: 24px;
-                font-weight: 400;
-                line-height: 34px;
+                @include font(24px, 400, 34px, var(--black-text));
                 text-transform: capitalize;
-                color: var(--black-text);
             }
 
             .shop-now-button {
@@ -43,13 +39,10 @@
                 background-color: var(--background-color);
                 border: none;
                 border-radius: 6px;
-                font-family: 'Figtree';
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 22px;
+                @include apply-font(--font-secondary);
+                @include font(14px, 500, 22px, var(--white-light));
                 letter-spacing: 2px;
                 text-transform: uppercase;
-                color: var(--white-light);
                 transition: 0.5s;
 
                 &:hover {
@@ -59,25 +52,6 @@
         }
     }
 }
-
-// ::ng-deep {
-
-//     .swiper-horizontal>.swiper-pagination-bullets,
-//     .swiper-pagination-bullets.swiper-pagination-horizontal {
-//         width: fit-content !important;
-//     }
-
-//     // Swiper pagination dots
-//     .swiper-pagination-bullet {
-//         background: transparent;
-//         border: 1px solid var(--background-color);
-//     }
-
-//     .swiper-pagination-bullet-active {
-//         background: var(--background-color);
-//         border: 1px solid transparent;
-//     }
-// }
 
 @media only screen and (max-width:1100px) {
     .promo-slider {
@@ -91,21 +65,18 @@
                 right: 24px;
 
                 .product-information-title {
-                    font-size: 15px;
-                    line-height: 25px;
+                    @include font(15px, 600, 25px, var(--background-color));
                 }
 
                 .product-information-subtitle {
-                    font-size: 15px;
-                    line-height: 20px;
+                    @include font(15px, 400, 20px, var(--black-text));
                 }
 
                 .shop-now-button {
                     height: 34px;
                     padding: 0 27px;
                     border-radius: 3px;
-                    font-size: 9px;
-                    line-height: 13px;
+                    @include font(9px, 500, 13px, var(--white-light));
                     letter-spacing: 1px;
                     margin-top: 15px;
                 }

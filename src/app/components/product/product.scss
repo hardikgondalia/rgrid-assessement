@@ -1,3 +1,5 @@
+@use '../../../font-mixin.scss' as *;
+
 .product-section {
     padding: 34px 0 42px;
 
@@ -8,19 +10,14 @@
         gap: 42px;
 
         .product-title {
-            font-size: 40px;
-            font-weight: 400;
+            @include font(40px, 400, normal, var(--black-text));
             text-align: center;
-            color: var(--black-text);
             padding-bottom: 24px;
         }
 
         .product-subtitle {
-            font-family: 'Figtree';
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 30px;
-            color: var(--gray-text);
+            @include apply-font(--font-secondary);
+            @include font(18px, 400, 30px, var(--grey-text));
         }
 
         .product-tablist-block {
@@ -33,12 +30,9 @@
         .product-tablist-item {
             flex: 1;
             padding: 12px 0;
-            font-weight: 300;
-            font-size: 18px;
-            line-height: 16px;
+            @include font(18px, 300, 16px, var(--black-text));
             text-align: center;
             text-transform: capitalize;
-            color: var(--black-text);
             opacity: 0.6;
             transition: color 0.3s ease;
             cursor: pointer;
@@ -78,13 +72,12 @@
     .product-section {
         .product-container {
             .product-title {
-                font-size: 32px;
-                line-height: 28px;
+                @include font(32px, 400, 28px, var(--black-text));
                 padding-bottom: 16px;
             }
 
             .product-subtitle {
-                line-height: 22px;
+                @include font(18px, 400, 22px, var(--grey-text));
             }
         }
     }
@@ -96,8 +89,7 @@
             gap: 32px;
 
             .product-title {
-                font-size: 24px;
-                line-height: 28px;
+                @include font(24px, 400, 28px, var(--grey-text));
                 padding-bottom: 16px;
                 padding-left: 27px;
                 padding-right: 27px;

@@ -1,3 +1,5 @@
+@use '../../../font-mixin.scss' as *;
+
 .footer {
     background-color: var(--black-overlay);
 
@@ -22,19 +24,13 @@
                     }
 
                     .footer-logo-title {
-                        font-size: 25px;
-                        font-weight: 700;
-                        line-height: 27px;
-                        color: var(--white-light);
+                        @include font(25px, 700, 27px, var(--white-light));
                     }
                 }
 
                 .footer-desc {
-                    font-family: 'Figtree';
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 24px;
-                    color: var(--white-light);
+                    @include apply-font(--font-secondary);
+                    @include font(16px, 400, 24px, var(--white-light));
                     padding: 26px 0 34px;
                 }
 
@@ -52,11 +48,8 @@
                         }
 
                         .footer-contact-title {
-                            font-family: 'Figtree';
-                            font-weight: 500;
-                            font-size: 16px;
-                            line-height: 25px;
-                            color: var(--white-light);
+                            @include apply-font(--font-secondary);
+                            @include font(16px, 500, 25px, var(--white-light));
                         }
                     }
                 }
@@ -73,11 +66,8 @@
                 gap: 18px;
 
                 .footer-links-title {
-                    font-family: 'Figtree';
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 24px;
-                    color: var(--white-light);
+                    @include apply-font(--font-secondary);
+                    @include font(16px, 400, 24px, var(--white-light));
                     text-decoration: none;
                     transition: 0.4s;
 
@@ -92,22 +82,16 @@
             }
 
             .footer-title {
-                font-family: 'Figtree';
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 26px;
-                color: var(--white-light);
+                @include apply-font(--font-secondary);
+                @include font(20px, 500, 26px, var(--white-light));
             }
 
             .payment-block {
                 width: 30%;
 
                 .payment-title {
-                    font-family: 'Figtree';
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 24px;
-                    color: var(--white-light);
+                    @include apply-font(--font-secondary);
+                    @include font(16px, 400, 24px, var(--white-light));
                     padding-top: 19px;
                 }
 
@@ -157,11 +141,8 @@
 
         .footer-bottom-title {
             gap: 13px;
-            font-family: 'Figtree';
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-            color: var(--white-light);
+            @include apply-font(--font-secondary);
+            @include font(16px, 400, 24px, var(--white-light));
         }
     }
 }
@@ -185,8 +166,7 @@
                 }
 
                 .footer-title {
-                    font-size: 18px !important;
-                    line-height: 18px !important;
+                    @include font(18px, 500, 18px, var(--white-light) !important);
                 }
 
                 .link-block {
@@ -217,11 +197,6 @@
 
                 .product-block {
                     width: 100% !important;
-                }
-
-                .footer-title {
-                    font-size: 18px !important;
-                    line-height: 18px !important;
                 }
 
                 .link-block {

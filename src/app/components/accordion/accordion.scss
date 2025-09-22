@@ -1,3 +1,5 @@
+@use '../../../font-mixin.scss' as *;
+
 .accordion-container {
     width: 100%;
     max-width: 1240px;
@@ -6,10 +8,8 @@
     margin: 0 auto;
 
     .accordion-title {
-        font-size: 40px;
-        font-weight: 400;
+        @include font(40px, 400, normal, var(--black-text));
         text-align: center;
-        color: var(--black-text);
     }
 
     .accordion-block {
@@ -27,9 +27,7 @@
 
                 .accordion-button {
                     padding: 26px 45px 20px 30px;
-                    font-size: 18px;
-                    font-weight: 400;
-                    color: var(--text-color);
+                    @include font(18px, 400, normal, var(--text-color));
                     box-shadow: none;
                 }
 
@@ -46,10 +44,8 @@
 
                 .accordion-body {
                     padding: 0 45px 20px 30px;
-                    font-family: 'Figtree';
-                    font-size: 16px;
-                    font-weight: 400;
-                    color: var(--light-black-text);
+                    @include apply-font(--font-secondary);
+                    @include font(16px, 400, normal, var(--light-black-text));
                     opacity: 0.7;
                 }
 
@@ -88,9 +84,7 @@
         gap: 32px;
 
         .accordion-title {
-            font-weight: 400;
-            font-size: 24px;
-            line-height: 40px;
+            @include font(24px, 400, 40px, var(--black-text));
         }
 
         .accordion-block {

@@ -1,3 +1,5 @@
+@use '../../../font-mixin.scss' as *;
+
 .navbar {
     border-bottom: 1px solid var(--light-grey-border);
 
@@ -10,10 +12,7 @@
         }
 
         .logo-title {
-            font-size: 25px;
-            font-weight: 700;
-            line-height: 27px;
-            color: var(--light-black-border);
+            @include font(25px, 700, 27px, var(--light-black-border));
         }
     }
 
@@ -28,10 +27,7 @@
 
         .nav-link {
             padding: 0;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 26px;
-            color: var(--light-black-border);
+            @include font(16px, 400, 26px, var(--light-black-border));
             transition: color 0.3s ease;
 
             &:hover {
@@ -69,10 +65,7 @@
             justify-content: center;
             align-items: center;
             font-family: 'Heebo';
-            font-weight: 400;
-            font-size: 11px;
-            line-height: 27px;
-            color: var(--white-light);
+            @include font(11px, 400, 27px, var(--white-light));
             border-radius: 50%;
         }
     }

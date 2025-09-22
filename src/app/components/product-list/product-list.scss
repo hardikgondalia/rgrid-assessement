@@ -1,3 +1,5 @@
+@use '../../../font-mixin.scss' as *;
+
 .product-list-container {
     width: 100%;
     max-width: 1240px;
@@ -27,12 +29,9 @@
                     padding: 0 12px;
                     border-radius: 32px;
                     background-color: var(--background-color);
-                    font-family: 'Figtree';
-                    font-weight: 500;
-                    font-size: 14px;
-                    line-height: 24px;
+                    @include apply-font(--font-secondary);
+                    @include font(14px, 500, 24px, var(--white-light));
                     text-transform: uppercase;
-                    color: var(--white-light);
                     position: absolute;
                     top: 22px;
                     right: 20px;
@@ -48,19 +47,13 @@
                     background-color: var(--light-black-border);
 
                     .card-title {
-                        font-size: 18px;
-                        font-weight: 400;
-                        line-height: 17px;
+                        @include font(18px, 400, 17px, var(--white-light));
                         text-transform: capitalize;
-                        color: var(--white-light);
                     }
 
                     .card-subtitle {
-                        font-family: 'Figtree';
-                        font-size: 20px;
-                        font-weight: 500;
-                        line-height: 30px;
-                        color: var(--background-color);
+                        @include apply-font(--font-secondary);
+                        @include font(20px, 500, 30px, var(--background-color));
                     }
                 }
             }
@@ -74,13 +67,10 @@
         background-color: var(--background-color);
         border: none;
         border-radius: 5px;
-        font-family: 'Figtree';
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 21px;
+        @include apply-font(--font-secondary);
+        @include font(15px, 500, 21px, var(--white-light));
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: var(--white-light);
         margin: 0 auto;
         transition: 0.5s;
 
@@ -139,7 +129,7 @@
             height: 56px;
             padding: 0 47px;
             border-radius: 5px;
-            font-size: 16px;
+            @include font(16px, 500, 21px, var(--white-light));
         }
     }
 }

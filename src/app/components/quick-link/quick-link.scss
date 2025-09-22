@@ -1,3 +1,5 @@
+@use '../../../font-mixin.scss' as *;
+
 .quick-link {
     background-image: url(../../../assets/images/quick-links/quick-links-bg.jpg);
     background-position: top;
@@ -22,18 +24,13 @@
         }
 
         .quicky-list-title {
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 38px;
-            color: var(--white-light);
+            @include font(24px, 400, 38px, var(--white-light));
             transition: 0.5s;
         }
 
         .quicky-list-subtitle {
-            font-family: 'Figtree';
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 25px;
+            @include apply-font(--font-secondary);
+            @include font(18px, 400, 25px, inherit);
             transition: 0.5s;
         }
     }
@@ -67,13 +64,11 @@
             gap: 6px;
 
             .quicky-list-title {
-                font-size: 16px;
-                line-height: 21px;
+                @include font(16px, 400, 21px, var(--white-light));
             }
 
             .quicky-list-subtitle {
-                font-size: 16px;
-                line-height: 22px;
+                @include font(16px, 400, 22px, inherit);
             }
         }
     }
@@ -92,11 +87,11 @@
             border-bottom: 1px solid var(--white-light);
 
             .quicky-list-title {
-                font-size: 20px;
+                @include font(20px, 400, 21px, var(--white-light));
             }
 
             .quicky-list-subtitle {
-                font-size: 18px;
+                @include font(18px, 400, 22px, inherit);
             }
         }
     }

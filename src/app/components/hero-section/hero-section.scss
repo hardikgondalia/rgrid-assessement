@@ -1,3 +1,5 @@
+@use '../../../font-mixin.scss' as *;
+
 .hero-section {
     width: 100%;
     height: 100vh;
@@ -12,11 +14,8 @@
         gap: 8px;
 
         .hero-title {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 27px;
+            @include font(18px, 400, 27px, var(--dark-grey-text));
             text-align: center;
-            color: var(--dark-grey-text);
         }
 
         .tablet-image {
@@ -35,14 +34,11 @@
                 background-color: var(--background-color);
                 border-radius: 5px;
                 border: 1px solid transparent;
-                font-family: 'Figtree';
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 21px;
+                @include apply-font(--font-secondary);
+                @include font(14px, 500, 21px, var(--white-light));
                 letter-spacing: 2px;
                 text-align: center;
                 text-transform: uppercase;
-                color: var(--white-light);
                 transition: 0.5s;
 
                 &:hover {
@@ -57,14 +53,11 @@
                 background-color: transparent;
                 border-radius: 5px;
                 border: 1px solid var(--light-black-border);
-                font-family: 'Figtree';
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 21px;
+                @include apply-font(--font-secondary);
+                @include font(14px, 400, 21px, var(--light-black-border));
                 letter-spacing: 2px;
                 text-align: center;
                 text-transform: uppercase;
-                color: var(--light-black-border);
                 transition: 0.5s;
 
                 &:hover {
@@ -181,7 +174,7 @@
                     width: 208px;
                     height: 56px;
                     padding: 0;
-                    font-size: 16px;
+                    @include font(16px, 500, 21px, var(--white-light));
                 }
             }
         }

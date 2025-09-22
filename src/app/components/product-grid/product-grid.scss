@@ -1,3 +1,5 @@
+@use '../../../font-mixin.scss' as *;
+
 .product-grid-block {
     padding: 60px 0;
 
@@ -36,19 +38,13 @@
                     left: 40px;
 
                     .product-information-title {
-                        font-size: 24px;
-                        font-weight: 600;
-                        line-height: 42px;
+                        @include font(24px, 600, 42px, var(--background-color));
                         text-transform: capitalize;
-                        color: var(--background-color);
                     }
 
                     .product-information-subtitle {
-                        font-size: 34px;
-                        font-weight: 400;
-                        line-height: 40px;
+                        @include font(34px, 400, 40px, var(--black-text));
                         text-transform: capitalize;
-                        color: var(--black-text);
                     }
                 }
             }
@@ -59,14 +55,11 @@
 
             .visit-store-link {
                 margin-top: 24px;
-                font-family: 'Figtree';
-                font-size: 14px;
-                font-weight: 600;
-                line-height: 22px;
+                @include apply-font(--font-secondary);
+                @include font(14px, 600, 22px, var(--background-color));
                 letter-spacing: 2px;
                 text-transform: uppercase;
                 text-decoration: underline;
-                color: var(--background-color);
                 transition: 0.5s;
 
                 &:hover {
@@ -100,10 +93,7 @@
                 }
 
                 .card-information-subtitle {
-                    font-size: 24px;
-                    font-weight: 400;
-                    line-height: 34px;
-                    color: var(--black-text);
+                    @include font(24px, 400, 34px, var(--black-text));
                     text-transform: capitalize;
                 }
 
@@ -152,13 +142,11 @@
                         left: 24px;
 
                         .product-information-title {
-                            font-size: 16px;
-                            line-height: 26px;
+                            @include font(16px, 600, 26px, var(--background-color));
                         }
 
                         .product-information-subtitle {
-                            font-size: 20px;
-                            line-height: 24px;
+                            @include font(20px, 400, 24px, var(--black-text));
                         }
                     }
 
@@ -193,8 +181,7 @@
                     }
 
                     .card-information-subtitle {
-                        font-size: 18px;
-                        line-height: 24px;
+                        @include font(18px, 400, 24px, var(--black-text));
                     }
 
                     .medical-supply-card {

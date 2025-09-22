@@ -1,0 +1,10 @@
+@mixin apply-font($font-variable) {
+    font-family: var(#{$font-variable});
+}
+
+@mixin font($font-size, $font-weight: 400, $line-height, $color: inherit) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}

@@ -1,18 +1,6 @@
 @use 'variables' as *;
-
-@font-face {
-  font-family: 'Sora';
-  src: url('assets/font/Sora-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Figtree';
-  src: url('assets/font/figtree/Figtree-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
+@use 'font.scss' as *;
+@use 'font-mixin.scss' as *;
 
 /* You can add global styles to this file, and also import other style files */
 * {
@@ -34,7 +22,7 @@ a:visited {
 }
 
 body {
-  font-family: "Sora";
+  @include apply-font(--font-primary);
   font-weight: normal;
   min-height: 100vh;
 }
