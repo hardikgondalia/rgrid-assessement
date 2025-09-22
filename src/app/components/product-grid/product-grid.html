@@ -48,7 +48,7 @@
             <a
               [href]="card.info.link.url"
               class="visit-store-link"
-              [ngClass]="{ 'text-light': card.info.link.textLight }"
+              [class.text-light]="card.info.link.textLight"
             >
               {{ card.info.link.label }}
             </a>

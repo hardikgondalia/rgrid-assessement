@@ -1,31 +1,16 @@
 <div class="address-container">
-    <div class="address-row d-flex">
-        <div class="address-card d-flex align-items-center">
-            <div class="address-image-block d-flex justify-content-center align-items-center">
-                <img src="assets/images/address-section/shipping.svg" alt="" class="address-image">
-            </div>
-            <div class="address-detail d-flex flex-column">
-                <div class="address-title">Free Shipping</div>
-                <div class="address-subtitle">Free Shipping on Orders Over $59 or with Your First Purchase</div>
-            </div>
-        </div>
-        <div class="address-card d-flex align-items-center">
-            <div class="address-image-block d-flex justify-content-center align-items-center">
-                <img src="assets/images/address-section/policy.svg" alt="" class="address-image">
-            </div>
-            <div class="address-detail d-flex flex-column">
-                <div class="address-title">30 Days Return policy</div>
-                <div class="address-subtitle">Hassle-free refunds for any issues with the orders</div>
-            </div>
-        </div>
-        <div class="address-card d-flex align-items-center">
-            <div class="address-image-block d-flex justify-content-center align-items-center">
-                <img src="assets/images/address-section/support.svg" alt="" class="address-image">
-            </div>
-            <div class="address-detail d-flex flex-column">
-                <div class="address-title">24/7 Support</div>
-                <div class="address-subtitle">Our dedicated team is always here to help</div>
-            </div>
-        </div>
+  <div class="address-row d-flex">
+    @for (item of addresses; track $index) {
+    <div class="address-card d-flex align-items-center">
+      <div class="address-image-block d-flex justify-content-center align-items-center">
+        <img [src]="item.image" alt="" class="address-image" />
+      </div>
+
+      <div class="address-detail d-flex flex-column">
+        <div class="address-title">{{ item.title }}</div>
+        <div class="address-subtitle">{{ item.subtitle }}</div>
+      </div>
     </div>
+    }
+  </div>
 </div>

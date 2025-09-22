@@ -9,7 +9,7 @@
   </div>
   <div class="brand-section d-flex">
     @for (brand of bannerData.brands; track brand) {
-    <div class="d-flex flex-column" [ngClass]="{ 'align-items-center': brand.alignCenter }">
+    <div class="d-flex flex-column" [class.align-items-center]="brand.alignCenter">
       @for (img of brand.images; track img.src) {
       <img [src]="img.src" [alt]="img.alt" [class]="img.class" />
       }
