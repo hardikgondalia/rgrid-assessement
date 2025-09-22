@@ -19,7 +19,9 @@ Angular 20, Bootstrap 5, Typescript, Swiper, SCSS, HTML5, CSS3
 
 ## Development server
 
+```bash
 npm install
+```
 
 To start a local development server, run:
 
