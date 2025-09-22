@@ -1,82 +1,28 @@
 <div class="product-list-container d-flex flex-column">
-    <div class="product-card-list d-flex flex-column">
-        <div class="product-card-row">
-            <div class="product-card d-flex flex-column">
-                <div class="position-relative">
-                    <img src="assets/images/product-card/product-card-one.jpg" alt="" class="card-image">
-                </div>
-                <div class="card-detail-block d-flex flex-column align-items-center">
-                    <div class="card-title">Surgical Hand Gloves</div>
-                    <div class="card-subtitle">$49.50</div>
-                </div>
-            </div>
-            <div class="product-card d-flex flex-column">
-                <div class="position-relative">
-                    <img src="assets/images/product-card/product-card-two.jpg" alt="" class="card-image">
-                </div>
-                <div class="card-detail-block d-flex flex-column align-items-center">
-                    <div class="card-title">Clinical Stethoscope</div>
-                    <div class="card-subtitle">$49.50</div>
-                </div>
-            </div>
-            <div class="product-card d-flex flex-column">
-                <div class="position-relative">
-                    <img src="assets/images/product-card/product-card-three.jpg" alt="" class="card-image">
-                    <div class="card-badge d-flex align-items-center">20% off</div>
-                </div>
-                <div class="card-detail-block d-flex flex-column align-items-center">
-                    <div class="card-title">Digital Thermometer</div>
-                    <div class="card-subtitle">$49.50</div>
-                </div>
-            </div>
-            <div class="product-card d-flex flex-column">
-                <div class="position-relative">
-                    <img src="assets/images/product-card/product-card-four.jpg" alt="" class="card-image">
-                </div>
-                <div class="card-detail-block d-flex flex-column align-items-center">
-                    <div class="card-title">Digital Thermometer</div>
-                    <div class="card-subtitle">$49.50</div>
-                </div>
-            </div>
-            <div class="product-card d-flex flex-column">
-                <div class="position-relative">
-                    <img src="assets/images/product-card/product-card-three.jpg" alt="" class="card-image">
-                    <div class="card-badge d-flex align-items-center">20% off</div>
-                </div>
-                <div class="card-detail-block d-flex flex-column align-items-center">
-                    <div class="card-title">Surgical Hand Gloves</div>
-                    <div class="card-subtitle">$49.50</div>
-                </div>
-            </div>
-            <div class="product-card d-flex flex-column">
-                <div class="position-relative">
-                    <img src="assets/images/product-card/product-card-five.jpg" alt="" class="card-image">
-                </div>
-                <div class="card-detail-block d-flex flex-column align-items-center">
-                    <div class="card-title">Clinical Stethoscope</div>
-                    <div class="card-subtitle">$49.50</div>
-                </div>
-            </div>
-            <div class="product-card d-flex flex-column">
-                <div class="position-relative">
-                    <img src="assets/images/product-card/product-card-six.jpg" alt="" class="card-image">
-                    <div class="card-badge sale-badge d-flex align-items-center">on sale</div>
-                </div>
-                <div class="card-detail-block d-flex flex-column align-items-center">
-                    <div class="card-title">Digital Thermometer</div>
-                    <div class="card-subtitle">$49.50</div>
-                </div>
-            </div>
-            <div class="product-card d-flex flex-column">
-                <div class="position-relative">
-                    <img src="assets/images/product-card/product-card-seven.jpg" alt="" class="card-image">
-                </div>
-                <div class="card-detail-block d-flex flex-column align-items-center">
-                    <div class="card-title">Digital Thermometer</div>
-                    <div class="card-subtitle">$49.50</div>
-                </div>
-            </div>
+  <div class="product-card-list d-flex flex-column">
+    <div class="product-card-row d-flex flex-wrap">
+      @for (product of visibleProducts; track $index) {
+      <div class="product-card d-flex flex-column">
+        <div class="position-relative">
+          <img [src]="product.image" [alt]="product.title" class="card-image" />
+          @if (product.badge) {
+          <div
+            class="card-badge d-flex align-items-center"
+            [class]="product.extraClass ? product.extraClass : 'card-badge'"
+          >
+            {{ product.badge }}
+          </div>
+          }
         </div>
+        <div class="card-detail-block d-flex flex-column align-items-center">
+          <div class="card-title">{{ product.title }}</div>
+          <div class="card-subtitle">{{ product.price }}</div>
+        </div>
+      </div>
+      }
     </div>
-    <button class="view-more-button">VIEW MORE</button>
+  </div>
+  @if (visibleProducts.length < products.length) {
+  <button class="view-more-button" (click)="viewMore()">VIEW MORE</button>
+  }
 </div>

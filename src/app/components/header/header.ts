@@ -15,20 +15,21 @@ export class Header {
   };
 
   navItems = [
-    { label: 'Home', link: '#', active: true },
-    { label: 'About', link: '#' },
+    { label: 'Home', link: '#home', active: true },
+    { label: 'About', link: '#about', active: false },
     {
       label: 'Collections',
       dropdown: true,
       children: [
-        { label: 'Medications', link: '#' },
+        { label: 'Medications', link: '#banner' },
         { label: 'Stethoscopes', link: '#' },
         { label: 'Thermometers', link: '#' },
         { label: 'Medical Supplies', link: '#' },
       ],
+      active: false,
     },
-    { label: 'Shop', link: '#' },
-    { label: 'Contact', link: '#' },
+    { label: 'Shop', link: '#product', active: false },
+    { label: 'Contact', link: '#contact', active: false },
   ];
 
   navIcons = [
@@ -43,4 +44,15 @@ export class Header {
       label: 'Cart',
     },
   ];
+
+  scrollToSection(event: Event, link: string) {
+    event.preventDefault();
+
+    const sectionId = link.replace('#', '');
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

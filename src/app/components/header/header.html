@@ -16,7 +16,6 @@
       <img src="assets/images/header/menu-list.svg" alt="menu" />
     </button>
 
-    <!-- Nav links -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto">
         @for (item of navItems; track item.label) {
@@ -38,7 +37,12 @@
           <ul class="dropdown-menu">
             @for (child of item.children; track child.label) {
             <li>
-              <a class="dropdown-item" [href]="child.link">{{ child.label }}</a>
+              <a
+                class="dropdown-item"
+                [href]="child.link"
+                (click)="scrollToSection($event, child.link); item.active = true"
+                >{{ child.label }}</a
+              >
             </li>
             }
           </ul>
