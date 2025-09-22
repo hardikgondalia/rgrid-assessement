@@ -2,6 +2,7 @@
 
 .banner-section {
     padding: 32px 84px;
+    border-bottom: 1px solid var(--light-grey-border);
 
     .banner-block {
         gap: 25px;
@@ -22,17 +23,22 @@
         gap: 62px;
 
         .trustpilot-image {
-            height: 39px;
+            height: 40px;
+        }
+
+        .trustpilot-star-image {
+            width: 160px;
+            height: 56px;
         }
 
         .google-image {
-            width: 132px;
-            height: 44px;
+            width: 127px;
+            height: 56px;
         }
 
         .google-star-image {
-            width: 144px;
-            height: 39px;
+            width: 168px;
+            height: 25px;
         }
     }
 }
@@ -59,23 +65,22 @@
             gap: 34px;
 
             .trustpilot-image {
-                width: 89px;
-                height: 22px;
+                height: 21px;
             }
 
             .trustpilot-star-image {
-                width: 89px;
-                height: 19px;
+                width: 96px;
+                height: 29px;
             }
 
             .google-image {
-                width: 71px;
-                height: 26px;
+                width: 72px;
+                height: 27px;
             }
 
             .google-star-image {
-                width: 92px;
-                height: 15px;
+                width: 86px;
+                height: 13px;
             }
         }
     }
@@ -94,35 +99,36 @@
 
             .chat-image {
                 width: 40px;
-                height: 40px;
+                height: 39px;
             }
 
             .banner-title {
-                @include font(18px, 400, 26px, var(--black-text));
+                @include font(18px, 400, 23px, var(--black-text));
                 text-align: center;
             }
         }
 
         .brand-section {
-            gap: 46px;
+            gap: 47px;
 
             .trustpilot-image {
-                width: 120px;
+                width: 119px;
                 height: 29px;
             }
 
             .trustpilot-star-image {
-                height: 37px;
+                width: 119px;
+                height: 40px;
             }
 
             .google-image {
-                width: 96px;
-                height: 36px;
+                width: 103px;
+                height: 39px;
             }
 
             .google-star-image {
-                width: 108px;
-                height: 21px;
+                width: 107px;
+                height: 17px;
             }
         }
     }

@@ -7,25 +7,16 @@
     }
 
     <div class="product-grid-right d-flex flex-column">
-      <div
-        class="product-grid-item position-relative d-flex justify-content-end align-items-center"
-      >
-        <img
-          [src]="productGridData.rightColumn.mainCard.image"
-          [alt]="productGridData.rightColumn.mainCard.alt"
-          [class]="productGridData.rightColumn.mainCard.imageClass"
-        />
+      <div class="product-grid-item position-relative d-flex justify-content-end align-items-center">
+        <img [src]="productGridData.rightColumn.mainCard.image" [alt]="productGridData.rightColumn.mainCard.alt"
+          [class]="productGridData.rightColumn.mainCard.imageClass" />
 
-        <div
-          class="product-right-information d-flex flex-column justify-content-center align-items-start"
-        >
+        <div class="product-right-information d-flex flex-column justify-content-center align-items-start">
           <div class="product-information-title">
             {{ productGridData.rightColumn.mainCard.info.title }}
           </div>
-          <div
-            class="product-information-subtitle"
-            [innerHTML]="productGridData.rightColumn.mainCard.info.subtitle"
-          ></div>
+          <div class="product-information-subtitle" [innerHTML]="productGridData.rightColumn.mainCard.info.subtitle">
+          </div>
           <a [href]="productGridData.rightColumn.mainCard.info.link.url" class="visit-store-link">
             {{ productGridData.rightColumn.mainCard.info.link.label }}
           </a>
@@ -37,19 +28,15 @@
         <div class="product-card-list position-relative d-flex" [ngClass]="card.extraClass">
           <img [src]="card.image" [alt]="card.alt" [class]="card.imageClass" />
 
-          <div
-            class="product-card-information d-flex flex-column"
-            [ngClass]="{
+          <div class="product-card-information d-flex flex-column" [ngClass]="{
               'align-items-end': card.info.align === 'end',
               'align-items-start': card.info.align === 'start'
-            }"
-          >
-            <div class="card-information-subtitle text-end" [innerHTML]="card.info.subtitle"></div>
-            <a
-              [href]="card.info.link.url"
-              class="visit-store-link"
-              [class.text-light]="card.info.link.textLight"
-            >
+            }" [class.medical-supply-information]="card.info.align==='start'">
+            <div class="card-information-subtitle text-start" [ngClass]="{
+               'text-end': card.info.align === 'end',
+               'text-start': card.info.align === 'start'
+              }" [innerHTML]="card.info.subtitle"></div>
+            <a [href]="card.info.link.url" class="visit-store-link" [class.text-light]="card.info.link.textLight">
               {{ card.info.link.label }}
             </a>
           </div>

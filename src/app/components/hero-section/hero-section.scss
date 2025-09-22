@@ -170,11 +170,19 @@
             .hero-footer-button {
                 flex-wrap: wrap;
 
-                .shop-button, .about-button {
+                .shop-button,
+                .about-button {
                     width: 208px;
                     height: 56px;
                     padding: 0;
+                }
+
+                .shop-button {
                     @include font(16px, 500, 21px, var(--white-light));
+                }
+
+                .about-button {
+                    @include font(16px, 500, 21px, var(--light-black-border));
                 }
             }
         }
