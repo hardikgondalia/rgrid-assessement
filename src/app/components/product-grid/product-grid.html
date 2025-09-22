@@ -1,36 +1,61 @@
 <div class="product-grid-block d-flex justify-content-center align-items-center">
-    <div class="product-grid-container d-flex">
-        <div class="product-slider">
-            <app-product-slider></app-product-slider>
-        </div>
-        <div class="product-grid-right d-flex flex-column">
-            <div class="product-grid-item position-relative d-flex justify-content-end align-items-center">
-                <img src="assets/images/product-grid/product-grid-two.png" alt=""
-                    class="object-fit-cover stethoscope-image">
-                <div class="product-right-information d-flex flex-column justify-content-center align-items-start">
-                    <div class="product-information-title">Save 30% on</div>
-                    <div class="product-information-subtitle">Digital Electronic<br>Stethoscopes</div>
-                    <a href="" class="visit-store-link">VISIT STORE</a>
-                </div>
-            </div>
-            <div class="product-grid-card d-flex">
-                <div class="product-card-list position-relative d-flex">
-                    <img src="assets/images/product-grid/product-grid-three.png" alt=""
-                        class="object-fit-cover thermometer-image">
-                    <div class="product-card-information d-flex flex-column align-items-end">
-                        <div class="card-information-subtitle text-end">Get Digital<br>Thermometers</div>
-                        <a href="" class="visit-store-link">VISIT STORE</a>
-                    </div>
-                </div>
-                <div class="product-card-list medical-supply-card position-relative d-flex">
-                    <img src="assets/images/product-grid/product-grid-four.png" alt=""
-                        class="object-fit-cover medical-supply-image">
-                    <div class="medical-supply-information d-flex flex-column align-items-start">
-                        <div class="card-information-subtitle">Essential<br>Medical<br>Supplies</div>
-                        <a href="" class="visit-store-link text-light">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="product-grid-container d-flex">
+    @if (productGridData.leftSlider) {
+    <div class="product-slider">
+      <app-product-slider></app-product-slider>
     </div>
+    }
+
+    <div class="product-grid-right d-flex flex-column">
+      <div
+        class="product-grid-item position-relative d-flex justify-content-end align-items-center"
+      >
+        <img
+          [src]="productGridData.rightColumn.mainCard.image"
+          [alt]="productGridData.rightColumn.mainCard.alt"
+          [class]="productGridData.rightColumn.mainCard.imageClass"
+        />
+
+        <div
+          class="product-right-information d-flex flex-column justify-content-center align-items-start"
+        >
+          <div class="product-information-title">
+            {{ productGridData.rightColumn.mainCard.info.title }}
+          </div>
+          <div
+            class="product-information-subtitle"
+            [innerHTML]="productGridData.rightColumn.mainCard.info.subtitle"
+          ></div>
+          <a [href]="productGridData.rightColumn.mainCard.info.link.url" class="visit-store-link">
+            {{ productGridData.rightColumn.mainCard.info.link.label }}
+          </a>
+        </div>
+      </div>
+
+      <div class="product-grid-card d-flex">
+        @for (card of productGridData.rightColumn.smallCards; track card.alt) {
+        <div class="product-card-list position-relative d-flex" [ngClass]="card.extraClass">
+          <img [src]="card.image" [alt]="card.alt" [class]="card.imageClass" />
+
+          <div
+            class="product-card-information d-flex flex-column"
+            [ngClass]="{
+              'align-items-end': card.info.align === 'end',
+              'align-items-start': card.info.align === 'start'
+            }"
+          >
+            <div class="card-information-subtitle text-end" [innerHTML]="card.info.subtitle"></div>
+            <a
+              [href]="card.info.link.url"
+              class="visit-store-link"
+              [ngClass]="{ 'text-light': card.info.link.textLight }"
+            >
+              {{ card.info.link.label }}
+            </a>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
 </div>
