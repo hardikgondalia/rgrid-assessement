@@ -158,23 +158,23 @@
                 column-gap: 130px;
 
                 .company-info-block {
-                    width: 45% !important;
+                    width: 47% !important;
                 }
 
                 .product-block {
-                    width: 35% !important;
+                    width: 33% !important;
                 }
 
                 .footer-title {
-                    @include font(18px, 500, 18px, var(--white-light) !important);
+                    @include font(18px !important, 500 !important, 18px !important, var(--white-light) !important);
                 }
 
                 .link-block {
-                    width: 45% !important;
+                    width: 47% !important;
                 }
 
                 .payment-block {
-                    width: 35% !important;
+                    width: 33% !important;
                 }
             }
         }
