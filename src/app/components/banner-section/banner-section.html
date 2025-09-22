@@ -1,16 +1,19 @@
 <div class="banner-section d-flex justify-content-between align-items-center">
-    <div class="banner-block d-flex align-items-center">
-        <img src="assets/images/banner/chat.svg" alt="" class="chat-image">
-        <div class="banner-title">Trusted by Thousands of Health Professionals & Households</div>
+  <div class="banner-block d-flex align-items-center">
+    <img
+      [src]="bannerData.block.image.src"
+      [alt]="bannerData.block.image.alt"
+      [class]="bannerData.block.image.class"
+    />
+    <div class="banner-title">{{ bannerData.block.title }}</div>
+  </div>
+  <div class="brand-section d-flex">
+    @for (brand of bannerData.brands; track brand) {
+    <div class="d-flex flex-column" [ngClass]="{ 'align-items-center': brand.alignCenter }">
+      @for (img of brand.images; track img.src) {
+      <img [src]="img.src" [alt]="img.alt" [class]="img.class" />
+      }
     </div>
-    <div class="brand-section d-flex">
-        <div class="d-flex flex-column">
-            <img src="assets/images/banner/trustpilot-logo.svg" alt="" class="trustpilot-image">
-            <img src="assets/images/banner/trustpilot-stars.svg" alt="" class="trustpilot-star-image">
-        </div>
-        <div class="d-flex flex-column align-items-center">
-            <img src="assets/images/banner/google.svg" alt="" class="google-image">
-            <img src="assets/images/banner/goggle-star.svg" alt="" class="google-star-image">
-        </div>
-    </div>
+    }
+  </div>
 </div>

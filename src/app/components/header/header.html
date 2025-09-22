@@ -1,54 +1,69 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
-    <div class="navbar-container d-flex align-items-center">
-        <a class="navbar-brand d-flex align-items-center py-0 me-0" href="#">
-            <img src="assets/images/logo.svg" alt="logo" class="logo-image" />
-            <span class="logo-title">medmart<span class="text-primary">.</span></span>
+  <div class="navbar-container d-flex align-items-center">
+    <a class="navbar-brand d-flex align-items-center py-0 me-0" href="#">
+      <img [src]="logo.src" alt="logo" class="logo-image" />
+      <span class="logo-title">
+        {{ logo.title }}<span class="text-primary">{{ logo.highlight }}</span>
+      </span>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <img src="assets/images/header/menu-list.svg" alt="menu" />
+    </button>
+
+    <!-- Nav links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        @for (item of navItems; track item.label) {
+        <li class="nav-item" [ngClass]="{ dropdown: item.dropdown }">
+          @if (!item.dropdown) {
+          <a class="nav-link" [class.active]="item.active" [href]="item.link">
+            {{ item.label }}
+          </a>
+          }
+
+          @if (item.dropdown) {
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="collectionsDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+          >
+            {{ item.label }}
+          </a>
+          <ul class="dropdown-menu">
+            @for (child of item.children; track child.label) {
+            <li>
+              <a class="dropdown-item" [href]="child.link">{{ child.label }}</a>
+            </li>
+            }
+          </ul>
+          }
+        </li>
+        }
+      </ul>
+
+      <div class="d-flex align-items-center navbar-icons">
+        @for (icon of navIcons; track icon.src) {
+        <a [href]="icon.link" class="position-relative">
+          <img
+            [src]="icon.src"
+            [alt]="icon.label || ''"
+            [width]="icon.width"
+            [height]="icon.height"
+          />
+          @if (icon.badge) {
+          <span class="cart-badge">{{ icon.badge }}</span>
+          }
         </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <img src="assets/images/header/menu-list.svg" alt="">
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="collectionsDropdown" role="button"
-                        data-bs-toggle="dropdown">
-                        Collections
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Medications</a></li>
-                        <li><a class="dropdown-item" href="#">Stethoscopes</a></li>
-                        <li><a class="dropdown-item" href="#">Thermometers</a></li>
-                        <li><a class="dropdown-item" href="#">Medical Supplies</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-
-            <div class="d-flex align-items-center navbar-icons">
-                <a href="#" class="">
-                    <img src="assets/images/header/search.svg" alt="" width="32px" height="34px">
-                </a>
-                <a href="#" class="">
-                    <img src="assets/images/header/user.svg" alt="" width="32px" height="34px">
-                </a>
-                <a href="#" class="position-relative">
-                    <img src="assets/images/header/add-to-cart.svg" alt="" width="32px" height="34px">
-                    <span class="cart-badge">03</span>
-                </a>
-            </div>
-        </div>
+        }
+      </div>
     </div>
+  </div>
 </nav>
