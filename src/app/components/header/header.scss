@@ -1,77 +1,84 @@
 @use '../../../font-mixin.scss' as *;
 
 .navbar {
+    padding: 21px 84px;
     border-bottom: 1px solid var(--light-grey-border);
 
-    .navbar-brand {
-        gap: 8px;
+    .navbar-container {
+        width: 100%;
+        justify-content: space-between;
 
-        .logo-image {
-            width: 35px;
-            height: 38px;
+        .navbar-brand {
+            gap: 8px;
+
+            .logo-image {
+                width: 35px;
+                height: 38px;
+            }
+
+            .logo-title {
+                @include font(25px, 700, 27px, var(--light-black-border));
+            }
         }
 
-        .logo-title {
-            @include font(25px, 700, 27px, var(--light-black-border));
-        }
-    }
-
-    .navbar-toggler {
-        padding: 0;
-        border: none;
-    }
-
-    .navbar-nav {
-        padding: 0 40px;
-        gap: 42px;
-
-        .nav-link {
+        .navbar-toggler {
             padding: 0;
-            @include font(16px, 400, 26px, var(--light-black-border));
-            transition: color 0.3s ease;
-
-            &:hover {
-                color: var(--background-color);
-            }
-
-            &.active {
-                color: var(--background-color);
-                font-weight: 600;
-            }
+            border: none;
         }
-    }
 
-    .navbar-icons {
-        gap: 32px;
+        .navbar-nav {
+            padding: 0 40px;
+            gap: 42px;
 
-        a {
-            color: #333;
-            font-size: 1.2rem;
-            position: relative;
+            .nav-link {
+                padding: 0;
+                @include font(16px, 400, 26px, var(--light-black-border));
+                transition: color 0.3s ease;
 
-            &:hover {
-                color: #0d6efd;
+                &:hover {
+                    color: var(--background-color);
+                }
+
+                &.active {
+                    color: var(--background-color);
+                    font-weight: 600;
+                }
             }
         }
 
-        .cart-badge {
-            position: absolute;
-            top: -5px;
-            right: -10px;
-            width: 25px;
-            height: 25px;
-            background-color: var(--background-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Heebo';
-            @include font(11px, 400, 27px, var(--white-light));
-            border-radius: 50%;
-        }
-    }
+        .navbar-icons {
+            gap: 32px;
 
-    .navbar-toggler:focus {
-        box-shadow: none;
+            a {
+                color: #333;
+                font-size: 1.2rem;
+                position: relative;
+
+                &:hover {
+                    color: #0d6efd;
+                }
+            }
+
+            .cart-badge {
+                position: absolute;
+                top: -5px;
+                right: -10px;
+                width: 25px;
+                height: 25px;
+                background-color: var(--background-color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Heebo';
+                @include font(11px, 400, 27px, var(--white-light));
+                border-radius: 50%;
+            }
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
     }
 }
 
@@ -79,6 +86,7 @@
     .navbar-nav {
         padding: 20px 0 !important;
         gap: 20px !important;
+        width: 100% !important;
     }
 
     .nav-item {
@@ -87,6 +95,11 @@
 
     .navbar {
         padding: 21px 48px;
+
+        .navbar-container {
+            flex-wrap: wrap;
+        }
+
         .navbar-icons {
             justify-content: flex-end;
             padding-top: 10px;
